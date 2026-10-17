@@ -75,6 +75,7 @@ We may update this Privacy Policy from time to time. Any updates will be reflect
 
 ## 7. Contact Us
 If you have any questions or concerns regarding this Privacy Policy or HyperArchive, please contact:
-- **Developer:** Rahul
-- **Email:** support@hyperarchive.app (or contact via your GitHub repository)
-- **GitHub:** https://github.com/rahul/HyperArchive
+- **Developer:** Rahul Bhatia
+- **Email:** support@hyperarchive.app
+- **GitHub:** https://github.com/rahul12662006-cloud/HyperArchive-PrivacyPolicy
+
