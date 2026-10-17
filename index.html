@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - HyperArchive</title>
+  <style>
+    :root {
+      --bg: #0b111e;
+      --card-bg: #131c2e;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #00d2ff;
+      --border: #1e293b;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    h1 {
+      color: #fff;
+      font-size: 28px;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 16px;
+    }
+    h2 {
+      color: var(--accent);
+      font-size: 20px;
+      margin-top: 32px;
+    }
+    h3 {
+      font-size: 16px;
+      color: #f1f5f9;
+      margin-top: 20px;
+    }
+    p, li {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    code {
+      background: #1e293b;
+      color: #38bdf8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(0, 210, 255, 0.1);
+      color: var(--accent);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HyperArchive Privacy Policy</h1>
+    <div class="badge">Effective Date: October 17, 2026</div>
+
+    <p>HyperArchive ("we", "our", or "the App") is developed and maintained as a privacy-first, local-first file manager, archive extractor, cloud storage client, and peer-to-peer file bridge. We are strongly committed to respecting and protecting your privacy.</p>
+
+    <h2>1. Zero Personal Data Collection Policy</h2>
+    <ul>
+      <li><strong>No Analytics / No Tracking:</strong> HyperArchive does not collect, track, profile, or sell your personal information, device identifiers, or browsing habits.</li>
+      <li><strong>No Third-Party Advertising:</strong> The App contains no advertising SDKs or third-party behavioral tracking libraries.</li>
+      <li><strong>Local-First Architecture:</strong> All file operations (compression, extraction, encryption, decryption, indexing, and viewing) happen locally on your device or directly between your device and your chosen storage endpoints.</li>
+    </ul>
+
+    <h2>2. Permissions and How They Are Used</h2>
+    <p>HyperArchive requests only the permissions strictly required to perform core file management, archiving, and transfer tasks:</p>
+
+    <h3>A. All Files Access (<code>MANAGE_EXTERNAL_STORAGE</code>, <code>READ_EXTERNAL_STORAGE</code>, <code>WRITE_EXTERNAL_STORAGE</code>)</h3>
+    <p><strong>Purpose:</strong> HyperArchive is a full-featured file manager and archive utility (7Z, ZIP, RAR, TAR, GZ, BZ2, XZ). Full file access is essential to browse files, extract archives to any chosen directory, compress documents/media, install user-selected APKs, and manage your storage.</p>
+    <p><strong>Data Handling:</strong> File data never leaves your device unless you explicitly initiate an upload to your own cloud account or transfer files via HyperBridge.</p>
+
+    <h3>B. Camera (<code>CAMERA</code>)</h3>
+    <p><strong>Purpose:</strong> Used exclusively to scan QR codes for pairing devices over HyperBridge (local Wi-Fi transfer).</p>
+    <p><strong>Data Handling:</strong> No photos, video recordings, or facial data are ever saved, stored, or transmitted. The camera stream is processed strictly in-memory solely for barcode recognition.</p>
+
+    <h3>C. Local Network & Wi-Fi (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>, <code>CHANGE_WIFI_MULTICAST_STATE</code>)</h3>
+    <ul>
+      <li><strong>HyperBridge:</strong> Facilitates direct peer-to-peer file transfer between devices connected to the same local Wi-Fi or hotspot network.</li>
+      <li><strong>Network Storage:</strong> Connects to local SMB (Windows Share/NAS), SFTP, or WebDAV servers per your explicit configuration.</li>
+      <li><strong>Cloud Storage (Google Drive):</strong> Authenticates and syncs files directly with your authorized cloud account using official OAuth 2.0 PKCE protocols.</li>
+    </ul>
+    <p><strong>Data Handling:</strong> Data is only transmitted to endpoints you explicitly configure. No intermediary proxy server intercepts your traffic.</p>
+
+    <h3>D. Biometrics (<code>USE_BIOMETRIC</code>, <code>USE_FINGERPRINT</code>)</h3>
+    <p><strong>Purpose:</strong> Optional app lock feature to protect access to HyperArchive and your sensitive files using your device's fingerprint or face unlock.</p>
+    <p><strong>Data Handling:</strong> Biometric authentication is handled entirely by the Android operating system. The App never accesses or stores your raw biometric data.</p>
+
+    <h3>E. Foreground Service & Notifications (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_DATA_SYNC</code>, <code>POST_NOTIFICATIONS</code>)</h3>
+    <p><strong>Purpose:</strong> Keeps long-running compression, extraction, or network file transfers active when the app is minimized, preventing Android from killing the operation, and displays real-time progress notifications.</p>
+
+    <h3>F. Install Unknown Apps (<code>REQUEST_INSTALL_PACKAGES</code>)</h3>
+    <p><strong>Purpose:</strong> Allows users to open and install <code>.apk</code> and package files directly from the archive viewer or file explorer when initiated by the user.</p>
+
+    <h2>3. Cloud Storage & Third-Party Services</h2>
+    <p>When you connect Google Drive:</p>
+    <ul>
+      <li>Authentication uses secure OAuth 2.0 PKCE.</li>
+      <li>Access tokens and credentials are encrypted on your device using AES-256 encryption.</li>
+      <li>The App only accesses the files and folders you navigate to or select.</li>
+      <li>HyperArchive does not operate any backend server; all requests communicate directly between your device and Google's official API servers.</li>
+      <li>The App complies with Google API Services User Data Policy, including the Limited Use requirements.</li>
+    </ul>
+
+    <h2>4. Data Security</h2>
+    <ul>
+      <li>Encrypted vaults on device protect cloud tokens and sensitive preferences using standard cryptographic primitives.</li>
+      <li>Password-protected archives (ZIP, 7z) are encrypted and decrypted locally using standard AES-256 or ZipCrypto algorithms without transmitting passwords over the internet.</li>
+    </ul>
+
+    <h2>5. Children's Privacy</h2>
+    <p>HyperArchive does not knowingly collect or solicit any personal information from children under the age of 13.</p>
+
+    <h2>6. Contact Us</h2>
+    <p>If you have any questions or concerns regarding this Privacy Policy or HyperArchive, please contact:</p>
+    <ul>
+      <li><strong>Developer:</strong> Rahul</li>
+      <li><strong>Email:</strong> support@hyperarchive.app</li>
+    </ul>
+  </div>
+</body>
+</html>
